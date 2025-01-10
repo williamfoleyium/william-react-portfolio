@@ -1,18 +1,22 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/nav.css";
+import sun from "../assets/sun_icon.svg";
+import moon from "../assets/moon_icon.svg";
+import email from "../assets/email_icon.svg";
 
 export default function Nav() {
     const location = useLocation();
+    
     const getNavPositionClass = () => {
         switch (location.pathname) {
-            case "/": 
+            case "/":
                 return "nav-about";
             case "/projects":
                 return "nav-projects";
             case "/contact":
                 return "nav-contact";
-            default :
+            default:
                 return "";
         }
     };
@@ -23,9 +27,9 @@ export default function Nav() {
                 return "ABOUT";
             case "/projects":
                 return "PROJECTS";
-            case "/contact" :
+            case "/contact":
                 return "CONTACT";
-            default :
+            default:
                 return "";
         }
     };
@@ -38,14 +42,14 @@ export default function Nav() {
     }
 
     const renderNavLink = (to, imgSrc, altText, navClass) => {
-        const isCurrent = isCurrentPage(navClass); 
-        const linkClass = isCurrent ? "nav-link current" : "nav-link"; 
+        const isCurrent = isCurrentPage(navClass);
+        const linkClass = isCurrent ? "nav-link current" : "nav-link";
 
-    return (
-        <Link to={to} className={linkClass}>
-            <img src={imgSrc} alt={altText}/>
-            {isCurrent && <h1 className="page-title">{pageTitle}</h1>}
-        </Link>
+        return (
+            <Link to={to} className={linkClass}>
+                <img src={imgSrc} alt={altText}/>
+                {isCurrent && <h1 className="page-title">{pageTitle}</h1>}
+            </Link>
         );
     };
 
@@ -53,18 +57,21 @@ export default function Nav() {
         <nav className={`nav ${navPositionClass}`}>
             {renderNavLink(
                 "/",
+                sun,
                 "about icon",
                 "nav-about"
             )}
             {renderNavLink(
                 "/projects",
+                moon,
                 "projects icon",
                 "nav-projects"
             )}
             {renderNavLink(
                 "/contact",
+                email,
                 "contact icon",
-                "nav-contacts"
+                "nav-contact"
             )}
         </nav>
     );
