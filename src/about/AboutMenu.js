@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../styles/aboutMenu.css"
 
 export default class AboutMenu extends Component {
    render() {

@@ -1,0 +1,7 @@
+.profilePic.about {
+    height: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 30%;
+ }

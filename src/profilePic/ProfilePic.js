@@ -4,7 +4,7 @@ import ProfileImage from "../assets/WF_Profile_Picture5.png";
 import "../styles/profilePic.css"
 
 const ProfilePic = ({ page }) => {
-  const profilePicClass = `avatar ${page}`;
+  const profilePicClass = `profilePic ${page}`;
   const spanClass = `shadow-overlay-${page}`;
 
   return (
