@@ -1,9 +1,9 @@
-import nautilus from "../assets/nautilus";
-import heatedGardens from "../assets/heatedGardens";
-import medicasafe from "../assets/medicasafe";
+import nautilus from "../assets/nautilus.PNG";
+import heatedGardens from "../assets/heatedGardens.jpg";
+import medicasafe from "../assets/medicasafe.jfif";
 
 const projects = {
-    1: {
+    0: {
         title: "Nautilus",
         image: nautilus,
         description: (
@@ -15,7 +15,7 @@ const projects = {
         ),
         website: "https://nautilusonboarding.com/"
     },
-    2: {
+    1: {
         title: "Heated Gardens",
         image: heatedGardens,
         description: (
@@ -26,7 +26,7 @@ const projects = {
             </>
         ),
     },
-    3: {
+    2: {
         title: "Buprenorphine Dispenser",
         image: medicasafe,
         description: (
@@ -37,4 +37,6 @@ const projects = {
             </>
         ),
     },
-}
+};
+
+export default projects;

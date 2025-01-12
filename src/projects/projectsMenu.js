@@ -19,10 +19,10 @@ export default class projectsMenu extends Component {
 
   renderContent = (projects) => {
     return projects.map((project, index) => (
-        <div key={index} className = {`project-sub-container-${index+1}`}>
+        <div key={index} className = {`project-sub-container-${index}`}>
             <h3>{project.title}</h3>
             <img src={project.image} alt={project.title}/>
-            <div className="link=container">
+            <div className="link-container">
                 <a href={project.website}>WEBSITE</a>
             </div>
         </div>
@@ -30,14 +30,14 @@ export default class projectsMenu extends Component {
   }
   
     render() {
-        const {activeProjects} = this.state;
+        const {activeProject} = this.state;
         const projectItems = ["Nautilus", "Heated Gardens", "Buprenorphine Dispenser"];
 
         return (
         <div className="project-menu">
             <div className="project-item-container">
                 {projectItems.map((item, index) => (
-                    <div key={index} className={classNames("project-item",{activeProject:activeProject === index + 1})} onClick={() => this.handleProjectClick(index + 1)}>
+                    <div key={index} className={classNames("project-item",{activeProject:activeProject === index})} onClick={() => this.handleProjectClick(index)}>
                         <h2 className="title">{item}</h2>
                     </div>
                 ))}
