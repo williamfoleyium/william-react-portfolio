@@ -7,7 +7,7 @@ export default class projectsMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        activeProject: 1,
+        activeProject: 0,
     };
   }
   
